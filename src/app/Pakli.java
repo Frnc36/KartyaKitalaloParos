@@ -16,12 +16,11 @@ public class Pakli {
         for (String szin : szinek) {
             for (String ertek : ertekek) {
                 Lap lap = new Lap(szin,ertek);
-                    if(i<21){
-                            lapok[i]=lap;
-                            i++;
-                        }
-                    }
-                }
+                lapok[i]=lap;
+                i++;
+            }
+        }
+
             
     }
 
