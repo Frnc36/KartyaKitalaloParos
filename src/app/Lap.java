@@ -2,20 +2,20 @@ package app;
 
 public class Lap {
 
-    private String ertek;
     private String szin;
+    private String ertek;
 
-    public Lap(String ertek, String szin) {
-        this.ertek = ertek;
+    public Lap(String szin, String ertek) {
         this.szin = szin;
-    }
-
-    public String getErtek() {
-        return ertek;
+        this.ertek = ertek;
     }
 
     public String getSzin() {
         return szin;
+    }
+
+    public String getErtek() {
+        return ertek;
     }
 
     public String megjelenit() {
