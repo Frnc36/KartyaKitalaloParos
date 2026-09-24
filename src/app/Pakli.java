@@ -14,9 +14,10 @@ public class Pakli {
             for (int i = 0; i < 21;) {
                 for (int j = 0; j < 4; j++) {
                     for (int k = 0; k < 6; k++) {
-                        if(i<21){
-                            i++;
+                        if(i<20){
+                            
                             lapok[i]=new Lap(szin[j],ertek[k]);
+                            i++;
                         }
                     }
                 }
