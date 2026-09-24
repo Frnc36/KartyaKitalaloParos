@@ -14,7 +14,8 @@ public class Program {
             int oszlop = melyik();
             pakli.kever(oszlop);
         }
-        System.out.println(pakli.ezVolt().megjelenit());
+        kirak();
+        System.out.println("Ez volt? " + pakli.ezVolt().megjelenit());
 
     }
 
@@ -23,9 +24,9 @@ public class Program {
             System.out.print(i + 1 + ". \t");
         }
         System.out.println();
-        for (int i = 0; i < pakli.getLapok().length; i++) {
+        for (int i = 1; i < pakli.getLapok().length; i++) {
             System.out.print(pakli.getLapok()[i].megjelenit() + "\t");
-            if (i != 0 && i % 3 == 2) {
+            if (i % 3 == 0) {
                 System.out.println();
             }
         }
