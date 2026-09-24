@@ -31,7 +31,7 @@ public class Program {
         }
     }
 
-    private static int melyik() {
+      static int melyik() {
         int oszlop;
         do {
             System.out.print("Melyik oszlop (1-3): ");
