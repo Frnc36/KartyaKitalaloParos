@@ -29,9 +29,35 @@ public class Pakli {
         return ujLapok;
     }
     
+    public void kever(int oszlop){
+        Lap[] regiLapok = lapok;
+        switch (oszlop) {
+            case 1:
+                for (int i = 1; i < 8; i++) {
+                    lapok[i] = regiLapok[19-(i-1)*3];
+                    lapok[i+7] = regiLapok[18-(i-1)*3];
+                    lapok[i+14] = regiLapok[20-(i-1)*3];
+                    
+                }   break;
+            case 2:
+                for (int i = 1; i < 8; i++) {
+                    lapok[i] = regiLapok[18-(i-1)*3];
+                    lapok[i+7] = regiLapok[19-(i-1)*3];
+                    lapok[i+14] = regiLapok[20-(i-1)*3];
+                    
+                }   break;
+            default:
+                for (int i = 1; i < 8; i++) {
+                    lapok[i] = regiLapok[18-(i-1)*3];
+                    lapok[i+7] = regiLapok[20-(i-1)*3];
+                    lapok[i+14] = regiLapok[19-(i-1)*3];
+                    
+                }   break;
+        }
+    }
     
-    
-    
-    
+    public Lap ezVolt(){
+        return lapok[10];
+    }
     
 }
