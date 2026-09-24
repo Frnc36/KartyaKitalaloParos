@@ -1,15 +1,20 @@
 package app;
 
+import java.util.Scanner;
+
 public class Program {
-static Pakli pakli = new Pakli();
+
+    static Scanner sc = new Scanner(System.in);
+    static Pakli pakli = new Pakli();
+
     public static void main(String[] args) {
-       Pakli pakli = new Pakli();
-        System.out.println(pakli);
-       
 
         for (int i = 0; i < 3; i++) {
             kirak();
+            int oszlop = melyik();
+            pakli.kever(oszlop);
         }
+        System.out.println(pakli.ezVolt().megjelenit());
 
     }
 
@@ -18,27 +23,21 @@ static Pakli pakli = new Pakli();
             System.out.print(i + 1 + ". \t");
         }
         System.out.println();
-        for (int i = 1; i < pakli.getLapok().length; i++) {
-            System.out.print(pakli.getLapok()[i] + "\t");
-            if (i % 3 == 0) {
+        for (int i = 0; i < pakli.getLapok().length; i++) {
+            System.out.print(pakli.getLapok()[i].megjelenit() + "\t");
+            if (i != 0 && i % 3 == 2) {
                 System.out.println();
             }
         }
     }
 
+    private static int melyik() {
+        int oszlop;
+        do {
+            System.out.print("Melyik oszlop (1-3): ");
+            oszlop = sc.nextInt();
+        } while (oszlop < 1 || oszlop > 3);
+        return oszlop;
+    }
+
 }
-
-/*
-    public static void main(String[] args) {
-
-        FeltoltT();
-        for (int i = 0; i < 3; i++) {
-            Kirak(); //1 darab tömb
-            int oszlop = Melyik(); //input - Scanner
-            Kever(oszlop); //középre
-        }
-        EzVolt(); //11.elem, azaz a középső lap
-
-        //pakli tömb kiírása
-    }//main
- */
